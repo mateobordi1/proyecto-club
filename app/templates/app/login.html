@@ -1,0 +1,16 @@
+{% extends "app/layout.html" %}
+{% load static %}
+
+{% block title %}
+    login
+{% endblock %}
+
+{% block body %}
+    <form action="{% url 'login' %}" method="post">
+        {% csrf_token %}
+        <input type="text" name="username" placeholder="Username">
+        <input type="password" name="password" placeholder="Password">
+        <input type="submit" value="Iniciar Sesion">
+    </form>
+    
+{% endblock %}

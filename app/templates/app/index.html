@@ -1,0 +1,10 @@
+{% extends "app/layout.html" %}
+{% load static %}
+
+{% block title %}
+    Home
+{% endblock %}
+
+{% block body %}
+    {{request.user}}{{request.user.id}}
+{% endblock %}
